@@ -10,9 +10,7 @@ const ImageResults = ({ images }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [currentImg, setCurrentImg] = useState('');
 
-    // console.log("images is : ", images)
     const handleOpen = (img) => {
-        // console.log("image is  : ", img)
         setIsOpen(true);
         setCurrentImg(img);
     }
@@ -23,19 +21,10 @@ const ImageResults = ({ images }) => {
 
     const downladFile = (imgFile) => {
         saveAs(imgFile);
-        // const url = window.URL.createObjectURL(new Blob([imgFile]));
-
-        // var link = document.createElement("a");
-        // link.href = url;
-        // link.setAttribute('download',"new.jpg");
-        // document.body.appendChild(link);
-        // // link.download = "image.jpg";
-        // link.click();
     }
 
 
     if (images) {
-        // console.log("images is : ", images)
         var imageList = (
             <GridList cols={4}>
                 {images.map(img => (
